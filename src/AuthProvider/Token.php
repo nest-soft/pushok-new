@@ -150,6 +150,9 @@ class Token implements AuthProviderInterface
     public function generateApnsTopic(string $pushType)
     {
         switch ($pushType) {
+            case 'location':
+                return $this->appBundleId . '.location-query';
+
             case 'voip':
                 return $this->appBundleId . '.voip';
 
