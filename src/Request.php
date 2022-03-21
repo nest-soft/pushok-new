@@ -110,6 +110,7 @@ class Request
      */
     public function getHeaders(): array
     {
+        logger($this->headers);
         return $this->headers;
     }
 
